@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="selectedCountry"
+            type="com.example.ulkeler_uygulamasi.model.Country" />
+
+    </data>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CountryFragment">
+    <ImageView
+        android:id="@+id/countrydetail_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:downloadUrl="@{selectedCountry.imageUrl}"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:minHeight="200dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/countryname_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countrydetail_imageView"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="3dp"
+        android:padding="7dp"
+        android:text="@{selectedCountry.countryName}"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/countrycapital_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryname_Text"
+        android:layout_centerInParent="true"
+        android:padding="7dp"
+        android:text="@{selectedCountry.countryCapital}"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/countryragion_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countrycapital_Text"
+        android:layout_centerInParent="true"
+        android:text="@{selectedCountry.countryRegion}"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:padding="7dp" />
+
+    <TextView
+        android:id="@+id/countrycurrency_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryragion_Text"
+        android:layout_centerInParent="true"
+        android:text="@{selectedCountry.countryCurrency}"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:padding="7dp" />
+
+    <TextView
+        android:id="@+id/countrylanguage_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countrycurrency_Text"
+        android:layout_centerInParent="true"
+        android:text="@{selectedCountry.countryLanguage}"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:padding="7dp" />
+
+
+
+</RelativeLayout>
+</layout>
